@@ -1,5 +1,5 @@
 import FooterSimple from '@/components/sections/footer/FooterSimple';
-import NavbarDropdown from '@/components/ui/NavbarDropdown';
+import NavbarInline from '@/components/ui/NavbarInline';
 import SectionErrorBoundary from "@/components/ui/SectionErrorBoundary";
 import SiteBackgroundSlot from "@/components/ui/SiteBackgroundSlot";
 import { Outlet } from 'react-router-dom';
@@ -41,7 +41,7 @@ export default function Layout() {
     <StyleProvider buttonVariant="stagger" siteBackground="gridDots" heroBackground="lightRaysCenter">
       <SiteBackgroundSlot />
       <SectionErrorBoundary name="navbar">
-        <NavbarDropdown
+        <NavbarInline
       logo="Sony KMB Market"
       ctaButton={{
         text: "Contact Us",
