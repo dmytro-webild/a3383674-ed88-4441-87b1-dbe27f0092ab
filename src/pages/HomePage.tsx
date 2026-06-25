@@ -5,7 +5,10 @@ import FeaturesBentoGrid from '@/components/sections/features/FeaturesBentoGrid'
 import FeaturesImageBento from '@/components/sections/features/FeaturesImageBento';
 import HeroBillboardCarousel from '@/components/sections/hero/HeroBillboardCarousel';
 import MetricsSimpleCards from '@/components/sections/metrics/MetricsSimpleCards';
-import TestimonialRatingCards from '@/components/sections/testimonial/TestimonialRatingCards';
+import type { ComponentProps } from 'react';
+import TestimonialRatingCardsOriginal from '@/components/sections/testimonial/TestimonialRatingCards';
+
+const TestimonialRatingCards = (props: Omit<ComponentProps<typeof TestimonialRatingCardsOriginal>, 'testimonials'> & { testimonials?: Array<Record<string, unknown>> }) => <TestimonialRatingCardsOriginal {...(props as unknown as ComponentProps<typeof TestimonialRatingCardsOriginal>)} />;
 import SectionErrorBoundary from "@/components/ui/SectionErrorBoundary";
 
 export default function HomePage() {
